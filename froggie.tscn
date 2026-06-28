@@ -30,7 +30,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump_end",
-"speed": 24.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -38,7 +38,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump_hold",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -55,7 +55,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump_start",
-"speed": 24.0
+"speed": 16.0
 }]
 
 [node name="froggie" type="CharacterBody2D" unique_id=1543787180]

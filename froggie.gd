@@ -1,5 +1,9 @@
 extends CharacterBody2D
 var jump
+func _ready(): #autocalled on start 
+	$Sprite2D.play("idle") 
+	jump = 0 
+
 func _physics_process(delta): #updates every frame 
 	if not is_on_floor():
 		velocity.y +=4000*delta #accesses the y component of velocity 
@@ -41,7 +45,7 @@ func _on_sprite_2d_animation_finished() -> void:
 		$Sprite2D.play("idle")
 
 func _on_sprite_2d_animation_looped() -> void:
-	if not is_on_floor() or jump == 0: #if frog is in air or frog is idle
+	if position.y<460 or jump == 0: #if frog is in air or frog is idle
 		pass
 	else:
 		$Sprite2D.play("jump_end")

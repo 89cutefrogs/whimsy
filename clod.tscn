@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bi1j2asx0g1h5"]
+
+[ext_resource type="Script" uid="uid://d13qkwp31mu0h" path="res://clod.gd" id="1_7tikp"]
+[ext_resource type="Texture2D" uid="uid://bxc41nwmmhvdj" path="res://assets/clod.png" id="1_56m8i"]
+
+[node name="Clod" type="CharacterBody2D" unique_id=947004586]
+script = ExtResource("1_7tikp")
+
+[node name="Clod" type="Sprite2D" parent="." unique_id=259355054]
+position = Vector2(116.00001, 15.999996)
+scale = Vector2(0.20249055, 0.20532788)
+texture = ExtResource("1_56m8i")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1230438270]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
