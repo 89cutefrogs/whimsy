@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b5qk0dhbmm8ii"]
+
+[ext_resource type="Texture2D" uid="uid://dyfvtp4xcetoi" path="res://assets/spray.png" id="1_a8lfm"]
+[ext_resource type="Script" uid="uid://qfkc0d1m6o6y" path="res://spray.gd" id="1_b7mc8"]
+[ext_resource type="Texture2D" uid="uid://dvusojo4lraf2" path="res://assets/spray1.png" id="2_b7mc8"]
+[ext_resource type="Texture2D" uid="uid://c1p0chqj28slg" path="res://assets/spray2.png" id="3_kouv2"]
+[ext_resource type="Texture2D" uid="uid://u54y78mco5tj" path="res://assets/wowtar.png" id="5_kouv2"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tjhhg"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 12.3
+angle_min = 210.90001
+angle_max = 488.7
+inherit_velocity_ratio = -0.315
+initial_velocity_min = 60.71
+initial_velocity_max = 382.13998
+angular_velocity_min = 143.99998
+angular_velocity_max = 282.86
+gravity = Vector3(-10, 300, 0)
+linear_accel_min = 30.709997
+linear_accel_max = 30.709997
+radial_accel_min = -70.0
+radial_accel_max = -70.0
+tangential_accel_min = 63.579998
+tangential_accel_max = 82.149994
+turbulence_enabled = true
+turbulence_noise_strength = 5.53
+turbulence_noise_speed = Vector3(-0.025, 0.095, 0)
+
+[node name="spray" type="Control" unique_id=755502757]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b7mc8")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=940616268]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_a8lfm")
+texture_pressed = ExtResource("2_b7mc8")
+texture_hover = ExtResource("3_kouv2")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1413876004]
+position = Vector2(191.00003, 153)
+rotation = 2.9626322
+scale = Vector2(2.1804352, 2.2241235)
+emitting = false
+texture = ExtResource("5_kouv2")
+lifetime = 0.3
+one_shot = true
+explosiveness = 0.3
+randomness = 0.47
+process_material = SubResource("ParticleProcessMaterial_tjhhg")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,17 @@
+[gd_resource type="Theme" format=3 uid="uid://ro2mqfcajska"]
+
+[ext_resource type="Texture2D" uid="uid://bvak2wxr6drro" path="res://assets/button.png" id="1_bxxvl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35ipt"]
+texture = ExtResource("1_bxxvl")
+expand_margin_left = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 20.0
+
+[resource]
+Button/colors/font_color = Color(0.41007394, 0.2864613, 0.23297203, 1)
+Button/colors/font_hover_color = Color(0.595691, 0.44596303, 0.38060537, 1)
+Button/colors/font_outline_color = Color(0.9292557, 0.81610274, 0.7401844, 1)
+Button/constants/outline_size = 17
+Button/font_sizes/font_size = 75
+Button/styles/normal = SubResource("StyleBoxTexture_35ipt")

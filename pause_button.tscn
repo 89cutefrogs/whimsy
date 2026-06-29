@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c3facw1g08h3b"]
+
+[ext_resource type="Script" uid="uid://cfktq2cuoxcsf" path="res://pause_button.gd" id="1_d5o6i"]
+[ext_resource type="Texture2D" uid="uid://bgiss5q41v1p0" path="res://assets/pause.png" id="1_dreri"]
+
+[node name="pause button" type="Control" unique_id=165161026]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d5o6i")
+
+[node name="Button" type="TextureButton" parent="." unique_id=69748326]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 120.0
+texture_normal = ExtResource("1_dreri")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

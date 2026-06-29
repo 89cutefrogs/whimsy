@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://diakasogeugus"]
+
+[ext_resource type="Theme" uid="uid://c2oftaobhm36k" path="res://pausetheme.tres" id="1_6eyaj"]
+[ext_resource type="Texture2D" uid="uid://duulxoyx7sy58" path="res://assets/icon.svg" id="1_45vjg"]
+[ext_resource type="Script" uid="uid://b8rmem1p1lk77" path="res://pause.gd" id="1_aq7p1"]
+
+[node name="chicharon" type="Control" unique_id=362030020]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_6eyaj")
+script = ExtResource("1_aq7p1")
+
+[node name="MenuButton" type="MenuButton" parent="." unique_id=872739482]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 136.0
+scale = Vector2(0.3263346, 0.3263346)
+theme = ExtResource("1_6eyaj")
+icon = ExtResource("1_45vjg")
+item_count = 2
+popup/item_0/text = "bargle"
+popup/item_0/icon = ExtResource("1_45vjg")
+popup/item_0/id = 0
+popup/item_1/text = "boop beep bop"
+popup/item_1/icon = ExtResource("1_45vjg")
+popup/item_1/id = 1

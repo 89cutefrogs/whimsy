@@ -1,0 +1,15 @@
+[gd_resource type="Theme" format=3 uid="uid://c2oftaobhm36k"]
+
+[ext_resource type="Texture2D" uid="uid://duulxoyx7sy58" path="res://assets/icon.svg" id="1_rwaxt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ywk3b"]
+texture = ExtResource("1_rwaxt")
+
+[sub_resource type="SystemFont" id="SystemFont_rwaxt"]
+font_names = PackedStringArray("Rockwell")
+
+[resource]
+default_font = SubResource("SystemFont_rwaxt")
+MenuButton/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+PopupMenu/colors/font_color = Color(0.51588506, 0.3030108, 0.29215997, 1)
+PopupMenu/styles/panel = SubResource("StyleBoxTexture_ywk3b")
